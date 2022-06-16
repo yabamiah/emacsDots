@@ -87,6 +87,14 @@
   (add-hook 'auto-package-update-before-hook
 				(lambda () (message "Vou dar uma atualizada agora parcero"))))
 
+;; Customizando o buffer inicial
+(use-package dashboard
+  :ensure t
+  :config
+  (dashboard-setup-startup-hook)
+  (setq dashboard-banner-logo-title "Welcome to Emacs my angel!")
+  (setq dashboard-startup-banner "~/.emacs.d/banners/MidnightBSDLogo128x128.png")
+  (setq dashboard-center-content t))
 
 ;; Checagem da syntaxe e autocomplete
 (use-package flycheck
